@@ -44,7 +44,7 @@ Each link should ia an `a` tag. Each `a` tag should have as children the name of
 When clicking on the link, the url shows the corresponding section. For example, when clicking on the "Contact Me" link, the url path should be `/#contact-me`.
 Also, the click scrolls to the corresponding section with a smooth animation.
 
-### **Landing Section **
+### **Landing Section**
 
 The `LandingSection.js` file implements the below UI to provide a landing section for the app with an avatar, a greeting and a brief role description.
 
@@ -53,7 +53,7 @@ The `LandingSection.js` file implements the below UI to provide a landing sectio
 The `ProjectsSection` component defines a `projects` array with the data for each project and that information is passed to each `Card` component as props.
 
 The `Card.js` component implements the UI for the card using
-the following components from Chakra UI that have been already imported for you:
+the following components from Chakra UI:
 
 - HStack,
 - VStack,
@@ -78,10 +78,10 @@ The `onSubmit` function performs an API call by using the `submit` helper from `
 
 The `validationSchema` is a Yup schema that validates the form fields. The validation rules are as follows:
 
-- `firstName`: required field. Otherwise, the error message should be "Required".
-- `email`: required field and a valid email. If empty, the error message should be "Required". If not a valid email, the error message should be "Invalid email address".
+- `firstName`: required field. Otherwise, the error message is "Required".
+- `email`: required field and a valid email. If empty, the error message is "Required". If not a valid email, the error message is "Invalid email address".
 - `type`: Optional field
-- `comment`: required field and with a minimum of 25 characters. If empty, the error message should be "Required". If less than 25 characters, the error message should be "Must be at least 25 characters".
+- `comment`: required field and with a minimum of 25 characters. If empty, the error message is "Required". If less than 25 characters, the error message is "Must be at least 25 characters".
 
 b) **The `Input` components from Chakra UI are controlled components**.
 
@@ -89,9 +89,9 @@ b) **The `Input` components from Chakra UI are controlled components**.
 
 c) **Each field shows an error message when the field is touched and the validation fails**.
 
-Each field is grouped in a `FormControl` component. The `FormControl` component takes a `isInvalid` prop that you can use to show the error message.
+Each field is grouped in a `FormControl` component. The `FormControl` component takes a `isInvalid` prop that is used to show the error message.
 
-The `isInvalid` prop should be `true` when the field is touched and the validation fails.
+The `isInvalid` prop is `true` when the field is touched and the validation fails.
 
 The `FormErrorMessage` component from Chakra UI displays the corresponding error message if the `isInvalid` prop from the parent `FormControl` component is true.
 
@@ -110,12 +110,12 @@ The `response` object from the API has 2 properties:
 - `type`: 'success' | 'error'
 - `message`: Extra contextual information about the response
 
-You can use the provided `useAlertContext` hook to show the alert. The hook returns a function named `onOpen` that you can call to display it.
+The `useAlertContext` hook shows the alert. The hook returns a function named `onOpen` which is called to display it.
 
-Check the `alertContext.js` file to see the arguments the `onOpen` function expects.
+In the `alertContext.js` file the `onOpen` function expects a few arguments.
 
 If the response is successful, the alert displays in its content the first name of the user, according to the value typed in the form 1st field.
 
-The form is reset if the response is successful. For that use the `resetForm` function from the object returned from the `useFormik` hook.
+The form is reset if the response is successful using the `resetForm` function from the object returned from the `useFormik` hook.
 
 ![](screenshots/header_animation.gif)
